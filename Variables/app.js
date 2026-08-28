@@ -11,9 +11,6 @@ console.log(name);
 //variables can't start with numbers, 
 
 
-var 1name =  'khalid';
-console.log(1name);
-
 //result would show 'error'
 
 
@@ -25,8 +22,7 @@ var FirstName // pascal case
 
 //const stands for 'Constant' - meaning it can't change [can't be reassigned] and also it must be assigned or declared
 
-const lastName;
-lastName = "okorejior";
+const lastName = "okorejior";
 console.log(lastName);
 
 
