@@ -35,3 +35,58 @@ while(count < 13);
 
 
 //USING LOOP THROUGH ARRAYS
+const cars = ["ford", 'Chevy', "toyota", 'nissan'];
+for(let i = 0; i < cars.length; i++){
+  console.log(cars[i]);
+}
+
+//the forEach function is a way to go through every item in an array one by one and do something with each of them
+
+cars.forEach(function(car, index){
+  console.log(`${index} : ${car} `);
+});
+
+
+/*
+so basically instead of ;
+  console.log(cars[0]);
+  console.log(cars[1]);
+  console.log(cars[2]);
+
+  you can just use;
+
+  cars.forEach(function(car){
+    console.log(car);
+  });
+OR
+
+  cars.forEach(car => console.log(car));
+
+*/
+
+//MAP == this is used to return somethng different/gives you a new array
+
+const users = [
+  {id: 1, name:"Khalid"},
+  {id: 2, name:"Okorejior"},
+  {id: 3, name:"Imoukhuede"},
+  {id: 4, name:"Asekegbe"},
+] 
+const ids = users.map(function(user){
+  return user.id;
+});
+//this is going to go through the array and return the id of each users
+
+console.log(ids);
+
+
+//FOR IN Loop -- hich is used for objects
+const user = {
+  firstName : 'Khalid',
+  lastName : 'Okorejior',
+  age : 21,
+}
+
+for(let x in user){
+  console.log(`${x} : ${user[x]}`);
+};
