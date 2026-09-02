@@ -48,7 +48,7 @@ const person = {
   add: function(){
     console.log('Add person...');
   },
-  edit: function(id){
+  edit: function(id){ 
     console.log(`Edit person ${id}`)
   },
   delete: function(){
