@@ -38,3 +38,5 @@ scriptsArr.forEach(function(script) {
 });
 
 console.log(val);
+
+console.log(222);
