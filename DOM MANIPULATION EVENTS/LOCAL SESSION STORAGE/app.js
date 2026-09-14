@@ -1,44 +1,40 @@
-// set local storage item
-// localStorage.setItem('name', 'John');
-// localStorage.setItem('age', '30');
+//set local storage 
+//localStorage.setItem('name', 'khalid');
+//localStorage.setItem('age', '91');
 
-// set session storage item
-// sessionStorage.setItem('name', 'Beth');
+//set session storage 
+//sessionStorage.setItem('name', 'khalid');
 
-// remove from storage
-// localStorage.removeItem('name');
+//how to remove from local storage
+//localStorage.removeItem('name');
 
-// get from storage
-// const name = localStorage.getItem('name');
-// const age = localStorage.getItem('age');
+//how to get from local storage
+//const name = localStorage.getItem('name');
+//const age = localStorage.getItem('age');
+//console.log(name, age);
 
-// // clear local storage
-// localStorage.clear();
-
-// console.log(name, age);
 
 document.querySelector('form').addEventListener('submit', function(e){
   const task = document.getElementById('task').value;
+  console.log(task);
+  
+//to be able to log in multiple items , the if loop would be used and allso the JSON.parse to convert arrays to strings
+
 
   let tasks;
-
-  if(localStorage.getItem('tasks') === null) {
-    tasks = [];
-  } else {
-    tasks = JSON.parse(localStorage.getItem('tasks'));
+  if(localStorage.getItem('tasks') === null){
+      tasks = [];
+  } else{
+      tasks = JSON.parse(this.localStorage.getItem('tasks'));
   }
 
   tasks.push(task);
 
   localStorage.setItem('tasks', JSON.stringify(tasks));
+  alert('Task added');
 
-  alert('Task saved');
+  e.preventDefault(); 
+}); 
 
-  e.preventDefault();
-});
 
-const tasks = JSON.parse(localStorage.getItem('tasks'));
-
-tasks.forEach(function(task){
-  console.log(task);
-});
+//in local storage, you can only save strings,so ypu convert arrays to string when adding multiple items to the local storage
